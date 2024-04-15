@@ -1,5 +1,6 @@
-function addMenuContent(div) {
-  let parentDiv = document.getElementById(div);
+function addMenuContent() {
+  let parentDiv = document.getElementById('content');
+  parentDiv.innerHTML = '';
   let menuHeader = document.createElement('h1');
   menuHeader.textContent = 'Our Menu';
   let menuText = document.createElement('p');

@@ -3,25 +3,16 @@ import { addMenuContent } from './menu';
 import { addAboutContent } from './about';
 import './style.css';
 
-addHomeContent('content');
+addHomeContent();
 
-// document.getElementById('home-btn');
-// document.getElementById('menu-btn');
-// document.getElementById('about-btn');
+document.getElementById('home-btn').addEventListener('click', (e) => {
+  addHomeContent();
+});
 
-let navButtons = document.querySelectorAll('button');
-let contentDiv = document.getElementById('content');
+document.getElementById('menu-btn').addEventListener('click', (e) => {
+  addMenuContent();
+});
 
-navButtons.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    contentDiv.innerHTML = '';
-    let buttonId = e.target.id;
-    if (buttonId === 'about-btn') {
-      addAboutContent('content');
-    } else if (buttonId === 'menu-btn') {
-      addMenuContent('content');
-    } else {
-      addHomeContent('content');
-    }
-  });
+document.getElementById('about-btn').addEventListener('click', (e) => {
+  addAboutContent();
 });

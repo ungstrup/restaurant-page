@@ -1,5 +1,6 @@
-function addAboutContent(div) {
-  let parentDiv = document.getElementById(div);
+function addAboutContent() {
+  let parentDiv = document.getElementById('content');
+  parentDiv.innerHTML = '';
   let aboutHeader = document.createElement('h1');
   aboutHeader.textContent = 'About Us';
   let aboutText = document.createElement('p');

@@ -1,7 +1,8 @@
 import Home from './home.png';
 
-function addHomeContent(div) {
-  let parentDiv = document.getElementById(div);
+function addHomeContent() {
+  let parentDiv = document.getElementById('content');
+  parentDiv.innerHTML = '';
   let homeHeader = document.createElement('h1');
   homeHeader.textContent = 'Coffee Time';
   let homeText = document.createElement('p');
